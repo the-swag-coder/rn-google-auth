@@ -1,0 +1,15 @@
+step-1
+download OpenSSL from
+https://code.google.com/archive/p/openssl-for-windows/downloads
+
+step-2
+go to
+C:\Program Files\Java\jdk-15.0.2\bin
+
+step-3
+run
+keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | "D:\OpenSSL\bin\openssl.exe" sha1 -binary | "D:\OpenSSL\bin\openssl.exe" base64
+
+step-4
+run
+"D:\OpenSSL\bin\openssl.exe" -base64 32 | "D:\OpenSSL\bin\openssl.exe" sha1 -c
